@@ -15,8 +15,7 @@ vector<int> manacher(string s){
     }
 
     for (int i=0;i<n;++i)
-        if (i&1) m[i] = (m[i]/2) * 2;
-    else m[i] = (m[i]+1) /2 *2 -1;
+        if (i&1) m[i] = m[i]/2; else m[i] = (m[i]+1) /2;
 
     return m;
 }
