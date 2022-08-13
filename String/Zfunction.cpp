@@ -1,7 +1,3 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
 vector<int> zfunc(string s) {
     int n = s.size();
     vector<int> z(n);
@@ -22,15 +18,3 @@ vector<int> zfunc(string s) {
 // z[i]: LCP(s[0..n-1], s[i..n-1])
 //
 // Link: https://judge.yosupo.jp/problem/zalgorithm
-
-/*int main()
-{
-    ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
-
-    string s; cin >> s;
-    vector<int> z = zfunc(s);
-
-    for (int i:z) cout << i <<" ";
-
-    return 0;
-}*/
