@@ -36,7 +36,7 @@ struct Tree {
         if (h[x] < h[y]) swap(x,y);
 
         for (int k=(int)log2(n);k>=0;--k)
-            if (h[jump[k][x]] >= h[y]) {
+            if (h[x] - (1<<k) >= h[y]) {
                 x = jump[k][x];
             }
 
@@ -45,7 +45,7 @@ struct Tree {
         for (int k=log2(n);k>=0;--k)
             if (jump[k][x] != jump[k][y]) {
                 x = jump[k][x];
-                y = jump[k][x];
+                y = jump[k][y];
             }
 
         return jump[0][x];
