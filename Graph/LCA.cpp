@@ -17,7 +17,10 @@ struct Tree {
     }
 
     void build(int u,int cha) {
-        if (cha == -1) jump[u][0] = -1;
+        if (cha == -1) {
+            h[u] = 1;
+            jump[0][u] = -1;
+        }
 
         for (auto [w,v]:ke[u]) {
             if (v == cha) continue;
